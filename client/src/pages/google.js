@@ -1,8 +1,12 @@
 import React, { Component } from "react";
-
 import API from "../utils/API";
+import Container from "../components/Container";
+import Row from "../components/Row";
+import SearchForm from "../components/SearchForm";
+import Bookdetail from "../components/Booksdetail";
+import Col from "../components/Col"
 
-class MoviesContainer extends Component {
+class BooksContainer extends Component {
   state = {
     result: {},
     search: ""
@@ -38,30 +42,28 @@ class MoviesContainer extends Component {
     return (
       <Container>
         <Row>
+                    <SearchForm
+                      value= {this.state.search}
+                      handleInputChange={this.state.handleInputChange}
+                      handleFormSubmit={this.state.searchEmployees}
+                    />
           <Col size="md-8">
-            <Card
-              heading={this.state.result.Title || "Search for a Book to Begin"}>
-
-                <BooksDetail
+            
+                <Bookdetail
                   title={this.state.result.items.volumeInfo.title}
                   src={this.state.result.items.volumeInfo.imageLinks.smallThumbnail}
                   authors={this.state.result.items.volumeInfo.authors}
                   description={this.state.result.items.volumeInfo.description}
                   info={this.state.result.items.volumeInfo.infoLink}
                 />
-
-                <h3>No Results to Display</h3>
-
-            </Card>
           </Col>
           <Col size="md-4">
-            <Card heading="Search">
+             heading="Search">
               <SearchForm
                 value={this.state.search}
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}
               />
-            </Card>
           </Col>
         </Row>
       </Container>
@@ -69,4 +71,4 @@ class MoviesContainer extends Component {
   }
 }
 
-export default OmdbContainer;
+export default BooksContainer;

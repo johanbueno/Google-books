@@ -4,6 +4,8 @@ import Books from "./pages/Books";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+import MoviesContainer from "./pages/google";
+import BooksContainer from "./pages/google";
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
           <Route exact path="/books/:id">
             <Detail />
           </Route>
+          <Route exact path ="/google" component ={BooksContainer} />
           <Route>
             <NoMatch />
           </Route>
