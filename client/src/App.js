@@ -12,13 +12,8 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Route exact path={["/", "/books"]}>
-            <Books />
-          </Route>
-          <Route exact path="/books/:id">
-            <Detail />
-          </Route>
-          <Route exact path ="/google" component ={BooksContainer} />
+  
+          <Route exact path ="/" component ={BooksContainer} />
           <Route>
             <NoMatch />
           </Route>
