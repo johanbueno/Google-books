@@ -16,8 +16,6 @@ function SearchForm({handleInputChange}) {
           placeholder="Type employee name"
           id="search"
         />
-       
-
       </div>
     </form>
   );

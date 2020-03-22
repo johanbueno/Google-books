@@ -13,6 +13,6 @@ handleResponse(response);{
 
 export default {
   search: function(query) {
-    return axios.get(BASEURL + query + handleResponse);
+    return axios.get(BASEURL + query + APIKEY);
   }
 }
