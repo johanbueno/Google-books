@@ -1,0 +1,12 @@
+li {
+    list-style: none;
+    padding: 30px;
+    text-align: justify;
+    border: solid 1px black;
+    margin: 10px;
+}
+
+button {
+    float: right;
+    margin: 5px;
+}
